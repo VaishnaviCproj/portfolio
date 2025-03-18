@@ -917,7 +917,7 @@ hr {
 
     .linkedin-mobile {
         display: block;
-        margin-top: -20px; /* Show LinkedIn button on Mobile */
+        margin-top: -30px; /* Show LinkedIn button on Mobile */
     }
 
     .submit-btn {
