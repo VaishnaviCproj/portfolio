@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
+        <ul class="nav-links">
+            <li><a href="about.html">About</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="experience.html">Experience</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="contact.html">Contact Me</a></li>
+        </ul>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="experience.html">Experience</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="contact.html">Contact Me</a></li>
+        </ul>
+    </div>
+
+    <!-- Experience Section -->
+    <section class="experience">
+        <div class="experience-card">
+            <img src="logos\TAM-Logo-1.png" alt="Texas A&M University Logo" class="experience-logo">
+            <div class="experience-content">
+                <h2>Graduate Research Assistant</h2>
+                <h3>Texas A&M University</h3>
+                <p class="gray-text">Ongoing</p>
+                
+                <h4>Overview:</h4>
+                <p>
+                    Conducting research on corporate AI policies, ethics in Generative AI, and sustainable information systems. Supporting academic collaboration and accelerating research processes through innovative tracking and event coordination.
+                </p>
+
+                <h4>Key Contributions:</h4>
+                <ul>
+                    <li><strong>Research Summarization & Tracking:</strong> Accelerated the literature review process by implementing a research tracker to catalog and summarize 100+ papers through manual analysis and prompt engineering.</li>
+                    <li><strong>Symposium Coordination:</strong> Led the coordination of the Big XII+ MIS Research Symposium, managing 22 paper presentations for 125 scholars across 25 universities.</li>
+                    <li><strong>Policy Research:</strong> Currently gathering and analyzing corporate AI policies to understand evolving industry practices and regulatory trends.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="experience-card">
+            <img src="logos\Capgemini-Symbol.png" alt="Capgemini Logo" class="experience-logo">
+            <div class="experience-content">
+                <h2>Associate Consultant | Senior Analyst</h2>
+                <h3>Capgemini, Bangalore, India</h3>
+                <p class="gray-text">August 2021 – July 2023</p>
+
+                <h4>Overview:</h4>
+                <p>
+                    Worked on large-scale cloud data migration and analytics projects for Human Capital Management (HCM) and Corporate Real Estate Analytics (CREA).
+                </p>
+                <p>
+                    In HCM, I was instrumental in migrating data from 11 on-prem sources to Snowflake using Azure Data Factory. In CREA, I was instrumental in developing the ETL framework required to migrate data from multiple sources.
+                </p>
+
+                <h4>Key Contributions:</h4>
+                <ul>
+                    <li>Orchestrated the seamless transition of 15+ datasets into a sandbox environment by developing a data migration pipeline with Azure Data Factory and pandas, empowering business users to derive actionable insights for strategic decision-making.</li>
+                    <li>Validated data accuracy and minimized reporting errors by 90% by designing and executing unit test cases in qTest for 15+ datasets, enhancing client confidence in analytics outcomes.</li>
+                    <li>Boosted team productivity by 40% by facilitating training sessions for 35+ team members on Azure Databricks, Azure Data Factory, and Python, accelerating cloud adoption and upskilling the team.</li>
+                    <li>Streamlined SQL object deployments and cut deployment time by 50% by optimizing GitLab CI/CD pipelines, ensuring the timely delivery of client solutions.</li>
+                    <li>Enabled clients to uncover workforce trends and inform HR strategies by designing complex SQL queries in Snowflake for 10+ Power BI reports, driving data-driven decision-making in Human Capital Management (HCM) cloud migration.</li>
+                    <li>Secured data integrity and ensured reliable reporting by leading data validation for 200+ tables, safeguarding the accuracy of client decision-making processes.</li>
+                    <li>Transformed the Corporate Real Estate Analytics (CREA) landscape by architecting an ETL framework in Azure Data Factory, integrating data from 6+ source systems into Azure SQL Database, and delivering real-time insights on facilities, transportation, and employee occupancy.</li>
+                    <li>Automated complex data flows and reduced manual intervention by 95% by directing file-based data ingestion for 8+ vendor systems using Azure Data Factory and PySpark, earning the ‘Hercules’ award for automation excellence.</li>
+                    <li>Enhanced pipeline efficiency and lowered processing time by 40% by advising stakeholders on data dependencies and load patterns, addressing potential bottlenecks.</li>
+                    <li>Ensured project success and alignment with evolving business needs by engaging with clients through daily scrum meetings, providing timely updates, gathering feedback, and refining deliverables.</li>
+                </ul>                
+            </div>
+        </div>
+    </section>
+
+    <script>
+        let lastScrollTop = 0;
+        const hamburger = document.querySelector(".hamburger");
+        
+        window.addEventListener("scroll", function () {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        
+            if (scrollTop > lastScrollTop) {
+                // ✅ Scrolling Down → Hide Hamburger Menu (Only on Mobile)
+                if (window.innerWidth <= 768) {
+                    hamburger.style.opacity = "0";
+                    hamburger.style.pointerEvents = "none"; // Prevent clicking when hidden
+                }
+            } else {
+                // ✅ Scrolling Up → Show Hamburger Menu
+                hamburger.style.opacity = "1";
+                hamburger.style.pointerEvents = "auto";
+            }
+        
+            lastScrollTop = scrollTop;
+        });
+        
+        // ✅ Toggle Menu on Click
+        function toggleMenu() {
+            var menu = document.getElementById("mobileMenu");
+            menu.classList.toggle("active");
+        }
+    </script> 
+
+</body>
+</html>

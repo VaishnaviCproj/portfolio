@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizing Stock Market Performance</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- ✅ Fixed Navbar -->
+    <nav class="navbar">
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
+        <ul class="nav-links">
+            <li><a href="about.html">About</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="experience.html">Experience</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="contact.html">Contact Me</a></li>
+        </ul>
+    </nav>
+
+    <!-- ✅ Back Button -->
+    <a href="projects.html" class="back-button">Back</a>
+
+    <!-- ✅ Project Content -->
+    <section class="project-detail">
+        <h1>Visualizing Stock Market Performance using Tableau</h1>
+        <p class="project-date"><em>Created on Mar 15, 2025</em></p>
+
+        <!-- ✅ View on GitHub Button -->
+        <a href="https://public.tableau.com/views/StockMarketInsights/Dashboard2?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" target="_blank" class="github-btn">View Dashboard</a>
+
+        <!-- ✅ Tableau Dashboard Animation -->
+        <section class="video-section">
+            <video class="dashboard-video" autoplay muted loop>
+                <source src="Video folder\Stock Market Insights video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </section>
+
+
+        <hr>
+
+        <!-- ✅ Skills Section -->
+        <h4>Skills:</h4>
+        <ul>
+            <li><strong>Data Visualization:</strong> Tableau</li>
+            <li><strong>Data Analysis & Exploration:</strong> Time Series Analysis, Trend Identification</li>
+            <li><strong>Dashboard Design:</strong> Interactive Filters, User-Centered Visualization</li>
+            <li><strong>Stock Market Data Interpretation:</strong> OHLC Charts, Moving Averages, Trading Volume Trends</li>
+        </ul>
+
+        <hr>
+
+        <!-- ✅ Project Overview -->
+        <h4>Project Overview:</h4>
+        <p>
+            Developed an interactive Tableau dashboard to analyze stock price trends, market performance, and trading volume. 
+            The dashboard enables users to explore historical price movements, compare multiple stocks, and filter data dynamically 
+            by year and stock name to gain insights into market behavior.
+        </p>
+
+        <hr>
+
+        <!-- ✅ Key Contributions -->
+        <h4>Key Contributions:</h4>
+        <ul>
+            <li><strong>Interactive Dashboard:</strong> Designed multiple visualizations, including OHLC charts, stock price trends, and trading volume trends.</li>
+            <li><strong>Dynamic Filtering:</strong> Implemented interactive filters (Year and Stock Name) for enhanced user experience.</li>
+            <li><strong>Optimized Layout:</strong> Ensured readability, clear axis labels, and informative legends for better interpretation.</li>
+            <li><strong>Enhanced Data Storytelling:</strong> Refined the color scheme and improved visualization clarity.</li>
+        </ul>
+
+        <hr>
+
+        <!-- ✅ Results and Impact -->
+        <h4>Results and Impact:</h4>
+        <ul>
+            <li>Enabled easy comparison of stock performance over time.</li>
+            <li>Provided real-time filtering for identifying trends and trading patterns.</li>
+            <li>Improved data-driven decision-making through historical stock price insights.</li>
+            <li>Designed with accessibility and usability improvements for professional presentation.</li>
+        </ul>
+
+        <hr>
+
+        <!-- ✅ Learnings and Takeaways -->
+        <h4>Learnings and Takeaways:</h4>
+        <ul>
+            <li>Mastered Tableau features like dual-axis charts, calculated fields, and real-time data filtering.</li>
+            <li>Gained deeper insights into stock market trends and the impact of moving averages.</li>
+            <li>Enhanced dashboard storytelling for better engagement and usability.</li>
+            <li>Optimized dashboard layouts for clarity, interpretation, and professional presentation.</li>
+        </ul>
+    </section>
+
+    <!-- ✅ Back Button at the Bottom -->
+    <a href="projects.html" class="back-button">Back</a>
+
+    <!-- ✅ Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="experience.html">Experience</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="contact.html">Contact Me</a></li>
+        </ul>
+    </div>
+
+    <script>
+        let lastScrollTop = 0;
+        const hamburger = document.querySelector(".hamburger");
+        
+        window.addEventListener("scroll", function () {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        
+            if (scrollTop > lastScrollTop) {
+                // ✅ Scrolling Down → Hide Hamburger Menu (Only on Mobile)
+                if (window.innerWidth <= 768) {
+                    hamburger.style.opacity = "0";
+                    hamburger.style.pointerEvents = "none"; // Prevent clicking when hidden
+                }
+            } else {
+                // ✅ Scrolling Up → Show Hamburger Menu
+                hamburger.style.opacity = "1";
+                hamburger.style.pointerEvents = "auto";
+            }
+        
+            lastScrollTop = scrollTop;
+        });
+        
+        // ✅ Toggle Menu on Click
+        function toggleMenu() {
+            var menu = document.getElementById("mobileMenu");
+            menu.classList.toggle("active");
+        }
+    </script>
+
+</body>
+</html>

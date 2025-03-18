@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>End-to-End Sales Data Management and Analytics</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- ✅ Fixed Navbar -->
+    <nav class="navbar">
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
+        <ul class="nav-links">
+            <li><a href="about.html">About</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="experience.html">Experience</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="contact.html">Contact Me</a></li>
+        </ul>
+    </nav>
+
+    <!-- ✅ Back Button -->
+    <a href="projects.html" class="back-button">Back</a>
+
+    <!-- ✅ Project Content -->
+    <section class="project-detail">
+        <h1>End-to-End Sales Data Management and Analytics</h1>
+        <p class="project-date"><em>Created on Feb 28, 2025</em></p>
+
+        <p class="note"><strong>Note:</strong> If you want to see a copy of the report</p>
+        <a href="contact.html" class="contact-btn">Contact Me</a>
+
+        <hr>
+
+        <!-- ✅ Skills Section -->
+        <h4>Skills:</h4>
+        <ul>
+            <li><strong>Databases & Data Engineering:</strong> MariaDB, MongoDB, SQL, JSON</li>
+            <li><strong>Cloud & Infrastructure:</strong> AWS EC2, Peer-to-Peer Clustering (Galera)</li>
+            <li><strong>Automation & Optimization:</strong> Stored Procedures, Triggers, ETL, Replication</li>
+            <li><strong>Data Analysis & Modeling:</strong> Indexing, Transactions, Views, NoSQL, Aggregation Pipelines</li>
+        </ul>
+
+        <hr>
+
+        <!-- ✅ Project Overview -->
+        <h4>Project Overview:</h4>
+        <p>
+            This project involved designing and managing a database system to track customer orders, products, and sales data.
+            The solution combined MariaDB for transactional operations and MongoDB for analytical queries, showcasing the power 
+            of polyglot persistence. The system handled large data volumes, supported high write loads, and automated complex updates 
+            to ensure data consistency.
+        </p>
+
+        <hr>
+
+        <!-- ✅ Key Contributions -->
+        <h4>Key Contributions:</h4>
+        <ul>
+            <li><strong>Automated Data Updates:</strong> Reduced data update time by 98% by implementing stored procedures and triggers in MariaDB, enhancing system efficiency.</li>
+            <li><strong>Scalability & Performance:</strong> Demonstrated system scalability by implementing peer-to-peer clustering in AWS EC2 with Galera, handling high write volumes seamlessly.</li>
+            <li><strong>Data Analysis & Insights:</strong> Extracted valuable insights on customer behavior, fraud detection, and inventory management by analyzing JSON documents in MongoDB, driving strategic decision-making.</li>
+            <li><strong>Database Design & Optimization:</strong> Evaluated relational vs. NoSQL databases, selecting the optimal storage strategy for both transactional and analytical workloads.</li>
+            <li><strong>Data Integrity & Reliability:</strong> Implemented transactions, prepared statements, and replication to ensure data accuracy, prevent SQL injection, and build a fail-safe architecture.</li>
+        </ul>
+
+        <hr>
+
+        <!-- ✅ Results and Impact -->
+        <h4>Results and Impact:</h4>
+        <ul>
+            <li>Achieved near-instant data updates and minimized manual intervention through automated processes.</li>
+            <li>Enabled real-time analytics by structuring data into JSON documents for MongoDB, supporting complex business queries.</li>
+            <li>Ensured high availability and fault tolerance with database replication, protecting data against server failures.</li>
+        </ul>
+
+        <hr>
+
+        <!-- ✅ Learnings and Takeaways -->
+        <h4>Learnings and Takeaways:</h4>
+        <ul>
+            <li>Gained hands-on experience managing end-to-end data workflows, from ingestion and transformation to storage and analysis.</li>
+            <li>Learned the trade-offs between relational and NoSQL databases, understanding when to leverage each for different use cases.</li>
+            <li>Developed a deeper appreciation for distributed systems, exploring how clustering and replication enhance database performance and reliability.</li>
+        </ul>
+    </section>
+
+    <!-- ✅ Back Button at the Bottom -->
+    <a href="projects.html" class="back-button">Back</a>
+
+    <!-- ✅ Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="experience.html">Experience</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="contact.html">Contact Me</a></li>
+        </ul>
+    </div>
+
+    <script>
+        let lastScrollTop = 0;
+        const hamburger = document.querySelector(".hamburger");
+        
+        window.addEventListener("scroll", function () {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        
+            if (scrollTop > lastScrollTop) {
+                // ✅ Scrolling Down → Hide Hamburger Menu (Only on Mobile)
+                if (window.innerWidth <= 768) {
+                    hamburger.style.opacity = "0";
+                    hamburger.style.pointerEvents = "none"; // Prevent clicking when hidden
+                }
+            } else {
+                // ✅ Scrolling Up → Show Hamburger Menu
+                hamburger.style.opacity = "1";
+                hamburger.style.pointerEvents = "auto";
+            }
+        
+            lastScrollTop = scrollTop;
+        });
+        
+        // ✅ Toggle Menu on Click
+        function toggleMenu() {
+            var menu = document.getElementById("mobileMenu");
+            menu.classList.toggle("active");
+        }
+    </script>
+
+</body>
+</html>

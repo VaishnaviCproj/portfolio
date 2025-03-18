@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automated Breast Cancer Prediction Pipeline</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- ✅ Fixed Navbar -->
+    <nav class="navbar">
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
+        <ul class="nav-links">
+            <li><a href="about.html">About</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="experience.html">Experience</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="contact.html">Contact Me</a></li>
+        </ul>
+    </nav>
+
+    <!-- ✅ Back Button -->
+    <a href="projects.html" class="back-button">Back</a>
+
+    <!-- ✅ Project Content -->
+    <section class="project-detail">
+        <h1>Automated Breast Cancer Prediction Pipeline Using Apache Airflow, SQL Server, and Power BI</h1>
+        <p class="project-date"><em>Created on Feb 28, 2025</em></p>
+
+        <!-- ✅ View on GitHub Button -->
+        <a href="https://github.com/VaishnaviCproj/Breast-Cancer-Data-Analysis" target="_blank" class="github-btn">View on GitHub</a>
+
+        <!-- ✅ Animated Power BI Dashboard -->
+        <section class="video-section">
+        <video class="dashboard-video" autoplay muted loop>
+            <source src="Video folder\breast cancer data dashboard video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        </section>
+
+        <hr>
+
+        <!-- ✅ Skills Section -->
+        <h4>Skills:</h4>
+        <ul>
+            <li><strong>Data Engineering & Automation:</strong> Apache Airflow, SQL Server, Docker</li>
+            <li><strong>Machine Learning:</strong> Logistic Regression, Model Evaluation (Precision, Recall, ROC Curve, Confusion Matrix)</li>
+            <li><strong>Database Management:</strong> SQL Server Configuration, Remote Connectivity, Data Storage & Retrieval</li>
+            <li><strong>Visualization & Analytics:</strong> Power BI, Python (Matplotlib, Seaborn, Scikit-learn)</li>
+        </ul>
+
+        <hr>
+
+        <!-- ✅ Project Overview -->
+        <h4>Project Overview:</h4>
+        <p>
+            This project automates the end-to-end data processing, machine learning model training, 
+            and visualization of the Wisconsin Breast Cancer Dataset using Apache Airflow, SQL Server, and Power BI.
+        </p>
+        <ul>
+            <li><strong>Data Cleaning & Preparation:</strong> Airflow DAGs clean the dataset, handling missing values and duplicates before storing the processed data.</li>
+            <li><strong>Model Training & Prediction:</strong> A Jupyter notebook, triggered by Airflow, trains a Logistic Regression model and stores predictions in SQL Server.</li>
+            <li><strong>Data Visualization:</strong> A Power BI dashboard provides interactive insights into feature trends, model performance, and risk evaluation.</li>
+        </ul>
+
+        <hr>
+
+        <!-- ✅ Key Contributions -->
+        <h4>Key Contributions:</h4>
+        <ul>
+            <li><strong>End-to-End Automated Data Pipeline:</strong> Developed an Airflow DAG to clean and preprocess data, storing it in a mounted folder. The DAG is also responsible for triggering the Jupyter notebook.</li>
+            <li><strong>Machine Learning Model Implementation:</strong> Trained a Logistic Regression model to predict whether a tumor is Benign or Malignant.</li>
+            <li><strong>Power BI Dashboard for Model Insights:</strong> Designed an interactive dashboard featuring feature impact analysis, model performance metrics, a confusion matrix, and an ROC curve.</li>
+        </ul>
+
+        <hr>
+
+        <!-- ✅ Results and Impact -->
+        <h4>Results and Impact:</h4>
+        <ul>
+            <li>Enabled seamless integration of ML, Data Engineering, and Business Intelligence, making predictive insights accessible to non-technical users.</li>
+            <li>Automated model training and retraining for adaptability to new data.</li>
+            <li>Demonstrated real-world applications of an ML-powered analytics dashboard in healthcare, aiding early breast cancer detection.</li>
+        </ul>
+
+        <hr>
+
+        <!-- ✅ Learnings and Takeaways -->
+        <h4>Learnings and Takeaways:</h4>
+        <ul>
+            <li>Gained expertise in end-to-end ML deployment, data pipelines, and automation.</li>
+            <li>Configured remote access to enable Docker-based airflow to work with on-premises SQL Server, solving connectivity challenges.</li>
+            <li>Explored ML model evaluation and visualization in Power BI, making results easily interpretable for stakeholders.</li>
+        </ul>
+    </section>
+
+    <!-- ✅ Back Button at the Bottom -->
+    <a href="projects.html" class="back-button">Back</a>
+
+    <!-- ✅ Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="experience.html">Experience</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="contact.html">Contact Me</a></li>
+        </ul>
+    </div>
+
+    <!-- ✅ Toggle Mobile Menu Script -->
+    <script>
+        let lastScrollTop = 0;
+        const hamburger = document.querySelector(".hamburger");
+        
+        window.addEventListener("scroll", function () {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        
+            if (scrollTop > lastScrollTop) {
+                // ✅ Scrolling Down → Hide Hamburger Menu (Only on Mobile)
+                if (window.innerWidth <= 768) {
+                    hamburger.style.opacity = "0";
+                    hamburger.style.pointerEvents = "none"; // Prevent clicking when hidden
+                }
+            } else {
+                // ✅ Scrolling Up → Show Hamburger Menu
+                hamburger.style.opacity = "1";
+                hamburger.style.pointerEvents = "auto";
+            }
+        
+            lastScrollTop = scrollTop;
+        });
+        
+        // ✅ Toggle Menu on Click
+        function toggleMenu() {
+            var menu = document.getElementById("mobileMenu");
+            menu.classList.toggle("active");
+        }
+    </script>
+
+</body>
+</html>

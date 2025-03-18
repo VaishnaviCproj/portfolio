@@ -1,0 +1,904 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Italiana&display=swap');
+
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    color: #000;
+    padding-top: 90px; /* Pushes page content below the navbar */
+}
+
+/* 🔹 Navbar */
+.navbar {
+    background-color: #000;
+    padding: 20px 30px; /* Adjust padding */
+    display: flex;
+    justify-content: flex-end; /* Move menu to the right */
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 1000;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1); /* Optional shadow */
+}
+
+/* 🔹 Navbar List */
+.navbar ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+/* 🔹 Navbar Items */
+.navbar ul li {
+    margin: 0 15px;
+}
+
+/* 🔹 Navbar Links */
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: #007bff;
+}
+
+
+/* About Section - Center Alignment */
+.about {
+    display: flex;
+    justify-content: center; /* Center align everything */
+    align-items: center;
+    padding: 50px;
+    max-width: 1200px;
+    margin: 0 auto; /* Ensure the whole section stays in the middle */
+}
+
+/* Text Content */
+.about-content {
+    width: 55%;
+    padding-left: 5%; /* Maintain spacing */
+}
+
+/* Italiana font for 'About' */
+.about h1 {
+    font-size: 40px;
+    font-family: 'Italiana', serif;
+}
+
+.about h2 {
+    font-size: 22px;
+}
+
+.about h3 {
+    font-weight: bold;
+}
+
+.about p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Profile Image */
+.about-image {
+    width: 35%;
+    display: flex;
+    justify-content: center;
+    padding-right: 5%; /* Maintain spacing */
+    background-color: transparent;
+}
+
+.profile-placeholder {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-image: url('logos\VaishnaviChakradeo.jpg'); /* Replace with actual photo filename */
+    background-size: cover;
+    background-position: center;
+    background-color: transparent;
+}
+
+/* Social Media Buttons */
+.social-buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-start; /* Left-align buttons */
+    gap: 15px;
+}
+
+.social-buttons a {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: all 0.3s ease-in-out;
+    border: 2px solid black; /* Unified button style */
+}
+
+.linkedin-btn {
+    background-color: black;
+    color: white;
+}
+
+.linkedin-btn:hover {
+    background-color: white;
+    color: black;
+}
+
+.github-btn {
+    background-color: black;
+    color: white;
+}
+
+.github-btn:hover {
+    background-color: white;
+    color: black;
+}
+
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .about {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-content {
+        width: 90%;
+        padding: 0;
+    }
+
+    .about-image {
+        width: 100%;
+        justify-content: center;
+        padding-right: 0;
+        margin-top: 20px;
+    }
+
+    .social-buttons {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+/* Mobile Navigation - Hide Desktop Menu */
+.hamburger {
+    display: none;
+    font-size: 30px;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: opacity 0.3s ease-in-out; /* ✅ Smooth transition */
+}
+
+/* Mobile Menu */
+.mobile-menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #000;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.mobile-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.mobile-menu ul li {
+    padding: 10px 0;
+}
+
+.mobile-menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.mobile-menu ul li a:hover {
+    color: #007bff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar ul {
+        display: none; /* Hide desktop navbar */
+    }
+
+    .hamburger {
+        display: block; /* Show hamburger icon */
+    }
+
+    .mobile-menu.active {
+        display: block;
+    }
+}
+
+/* Centering the Education Section */
+.education {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 900px; /* Ensures it doesn't stretch too wide */
+    margin: 50px auto; /* Centers the section */
+    padding: 20px;
+}
+
+/* Education Card */
+.education-card {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border-radius: 15px; /* Increased for smoother edges */
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15); /* Stronger pop-out effect */
+    padding: 35px;
+    margin-bottom: 30px;
+    width: 100%;
+    max-width: 800px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Education Logo - Ensures consistent spacing */
+.education-logo {
+    width: 130px;
+    height: auto;
+    margin-right: 40px;
+}
+
+/* Keep Text Left-Aligned */
+.education-content {
+    text-align: left;
+    flex: 1; /* Allows text to take remaining space */
+}
+
+/* Education Content */
+.education-content h2 {
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+
+.education-content p {
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.education-content h3 {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.education-content ul {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.education-content ul li {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+@media (max-width: 1024px) { /* For iPads and tablets */
+    .education-card {
+        width: 85%; /* Prevents overflow on iPad */
+        padding: 30px;
+    }
+
+    .education-logo {
+        width: 110px; /* Slightly reduce logo size */
+        margin-right: 30px; /* Reduce spacing to fit text properly */
+    }
+}
+
+
+/* ✅ Responsive Design - Mobile Fix */
+@media (max-width: 768px) {
+    .education-card {
+        flex-direction: column;
+        text-align: left; /* ✅ Keep text aligned left */
+        align-items: center; /* ✅ Ensure consistent alignment */
+        width: 90%; /* ✅ Ensures both cards have equal width */
+        margin: 0 auto 20px; /* ✅ Centers each card */
+        padding: 20px;
+    }
+
+    .education-logo {
+        margin: 0 auto 15px; /* ✅ Centers the logos */
+        width: 130px; /* ✅ Ensures logos have the same size */
+    }
+
+    .education-content {
+        width: 100%; /* ✅ Makes sure text takes full width */
+    }
+
+    .education-content ul {
+        padding-left: 20px; /* ✅ Align bullet points properly */
+        text-align: left;
+        max-width: 100%;
+    }
+}
+
+/* Experience Section */
+.experience {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+/* Experience Card */
+.experience-card {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border-radius: 15px; /* Increased for smoother edges */
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15); /* Stronger pop-out effect */
+    padding: 35px;
+    margin-bottom: 30px;
+    width: 100%;
+    max-width: 800px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Experience Logo */
+.experience-logo {
+    width: 130px;
+    height: auto;
+    margin-right: 40px;
+}
+
+/* Keep Text Left-Aligned */
+.experience-content {
+    text-align: left;
+    flex: 1;
+}
+
+/* Adjust spacing for experience title, university name, and duration */
+.experience-content h2 {
+    font-size: 18px; /* Reduce title size slightly */
+    margin-bottom: 5px; /* Reduce space below title */
+}
+
+.experience-content h3 {
+    font-size: 15px; /* Reduce university name size */
+    margin-bottom: 3px; /* Reduce gap below university name */
+}
+
+.experience-content p {
+    font-size: 14px; /* Reduce title size slightly */
+    margin-bottom: 5px; /* Reduce space below title */
+}
+
+.experience-content h4 {
+    font-size: 14px; /* Reduce title size slightly */
+    margin-bottom: 5px; /* Reduce space below title */
+}
+
+.experience-content ul {
+    font-size: 14px; /* Reduce title size slightly */
+    margin-bottom: 5px; /* Reduce space below title */
+}
+
+.experience-content ul li {
+    font-size: 14px; /* Reduce title size slightly */
+    margin-bottom: 5px; /* Reduce space below title */
+}
+
+.gray-text {
+    color: #444444;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 10px; /* Reduce space below duration */
+}
+
+@media (max-width: 1024px) { /* For iPads and tablets */
+    .experience-card {
+        width: 85%; /* Prevents overflow on iPad */
+        padding: 30px;
+    }
+
+    .experience-logo {
+        width: 110px; /* Slightly reduce logo size */
+        margin-right: 30px; /* Reduce spacing to fit text properly */
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .experience-card {
+        flex-direction: column;
+        text-align: left;
+        align-items: center;
+        width: 90%;
+        margin: 0 auto 20px;
+        padding: 20px;
+    }
+
+    .experience-logo {
+        margin: 0 auto 15px;
+        width: 130px;
+    }
+
+    .experience-content {
+        width: 100%;
+    }
+
+    .experience-content ul {
+        padding-left: 20px;
+        text-align: left;
+        max-width: 100%;
+    }
+}
+
+.education-card:hover, .experience-card:hover {
+    transform: translateY(-5px); /* Lifts card slightly */
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2); /* Enhances shadow effect */
+}
+
+
+/* Updated Projects Grid - Responsive */
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    align-items: stretch; /* Ensures all tiles stretch to the same height */
+}
+
+/* Updated Project Card */
+/* Updated Projects Grid - Responsive */
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    align-items: stretch; /* Ensures all tiles stretch to the same height */
+}
+
+/* Updated Project Card */
+.project-card {
+    background: #fff; /* Keep white background */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    text-decoration: none;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%; /* Ensures uniform height across all cards */
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px; /* Fixed height for all images */
+    object-fit: contain; /* Ensures images fit without cropping */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: #f8f8f8; /* Light background for better visibility */
+    padding: 10px; /* Ensures images do not touch edges */
+}
+
+.project-card-content {
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    flex-grow: 1;
+    min-height: 80px; /* Ensures text section is the same size for all cards */
+}
+
+.project-card-content i {
+    font-size: 20px;
+    color: gray;
+}
+
+.project-card h2 {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+    color: rgba(0, 0, 0, 0.6); /* 60% Dark Gray Text */
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .projects-container {
+        grid-template-columns: 1fr; /* Stacks project cards on smaller screens */
+    }
+}
+
+
+/* 🔹 Project Detail Section */
+/* ✅ Project Detail Section */
+.project-detail {
+    max-width: 900px;
+    margin: 0 auto 0 auto; /* Centers the section horizontally */
+    padding: 30px;
+    line-height: 1.8;
+    text-align: left; /* Keeps content left-aligned */
+    position: relative;
+}
+
+.project-detail h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.project-detail .project-date {
+    font-size: 14px;
+    color: gray;
+    font-style: italic;
+    margin-bottom: 25px;
+}
+
+.project-detail h4 {
+    font-size: 20px;
+    margin-top: 35px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.project-detail p, 
+.project-detail ul {
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.project-detail ul {
+    padding-left: 25px;
+}
+
+.project-detail ul li {
+    margin-bottom: 10px;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #ccc;
+    margin: 30px 0;
+}
+
+/* ✅ Beautified Back Button */
+/* ✅ Align Back Button Horizontally with Content */
+/* ✅ Styled Back Button */
+.back-button {
+    display: inline-block;
+    background-color: white;
+    color: #007bff;
+    border: 2px solid #007bff;
+    padding: 12px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    margin-left: 50px;
+}
+
+.back-button:hover {
+    background-color: #007bff;
+    color: white;
+    transform: scale(1.05);
+    /*box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);*/
+}
+
+/* ✅ Styled Contact Me Button */
+.contact-btn {
+    display: inline-block;
+    background-color: white;
+    color: #007bff;
+    border: 2px solid #007bff;
+    padding: 10px 16px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+.contact-btn:hover {
+    background-color: #007bff;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* ✅ Button Group - Places Buttons Side by Side */
+.button-group {
+    display: flex;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+/* ✅ Styled View on GitHub Button */
+.github-btn {
+    display: inline-block;
+    background-color: white;
+    color: #007bff;
+    border: 2px solid #007bff;
+    padding: 10px 16px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+.github-btn:hover {
+    background-color: #007bff;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* ✅ Styled View Blog Button */
+.blog-btn {
+    display: inline-block;
+    background-color: white;
+    color: #28a745; /* Green color for blog button */
+    border: 2px solid #28a745;
+    padding: 10px 16px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+.blog-btn:hover {
+    background-color: #28a745;
+    color: white;
+    transform: scale(1.05);
+}
+
+
+/* ✅ Video Section Styling */
+.video-section {
+    text-align: center;
+    margin: 40px auto;
+    max-width: 900px;
+}
+
+/* ✅ Video Styling */
+.dashboard-video {
+    width: 100%; /* Makes it responsive */
+    max-width: 800px; /* Keeps it contained */
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+/* ✅ Mobile Responsive Design */
+@media (max-width: 768px) {
+    .project-detail {
+        padding: 20px; /* Reduce padding for smaller screens */
+        margin: 30px auto 0 auto; /* Adjust top margin */
+    }
+
+    .back-button {
+        margin-left: 20px; /* Adjust alignment for smaller screens */
+        font-size: 14px; /* Slightly smaller text */
+        padding: 10px 16px; /* Reduce padding */
+    }
+
+    .video-section {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .button-group {
+        flex-direction: column; /* Stack buttons vertically */
+        gap: 10px;
+        align-items: flex-start; /* Align to the left */
+    }
+
+    .dashboard-video {
+        width: 100%;
+        max-width: 100%; /* Ensures it scales down properly */
+        height: auto; /* Keeps aspect ratio */
+    }
+}
+
+/* Updated Skills Page Styles - Responsive */
+/* Updated Skills Page Styles - Responsive */
+.skills {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    font-family: 'Arial', sans-serif; /* Professional font */
+}
+
+.skills-category {
+    margin-bottom: 50px; /* Increased gap between skill categories */
+    padding-bottom: 30px; /* Extra space below each category */
+    border-bottom: 2px solid #d0d0d0; /* Adds a separator line */
+}
+
+.skills-category h2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px; /* Increased gap between title and skills */
+    font-family: 'Helvetica', sans-serif; /* Ensures professional appearance */
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px; /* Increased gap between skill boxes */
+}
+
+.skill-box {
+    background: #4a4a4a; /* Black background */
+    padding: 12px 18px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: normal; /* No bolding */
+    color: #fff; /* White text */
+    transition: transform 0.2s, background 0.2s;
+}
+
+.skill-box:hover {
+    transform: scale(1.05);
+    background: #222; /* Slightly lighter black on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .skills {
+        max-width: 100%;
+        padding: 15px;
+    }
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+}
+
+
+/* Contact Page Styles */
+/* General Contact Section */
+.contact {
+    max-width: 900px;
+    margin: 50px auto; /* Centers vertically & horizontally */
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the contact section */
+    justify-content: center;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center; /* Centers content */
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    width: 100%; /* Ensures it takes full width */
+    max-width: 700px; /* Prevents excessive stretching */
+}
+
+/* Contact Form */
+.contact-form {
+    flex: 1;
+    min-width: 300px;
+}
+
+.contact-form label {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 10px;
+    background: black;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+/* LinkedIn Section (Only for Desktop) */
+.linkedin-section {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Align LinkedIn Button and Badge */
+.linkedin-button {
+    background-color: #0077B5;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.linkedin-button:hover {
+    background-color: #005582;
+}
+
+/* Mobile LinkedIn Button (Hidden on Desktop) */
+.linkedin-mobile {
+    display: none;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .linkedin-section {
+        display: none; /* Hide LinkedIn badge on Mobile */
+    }
+
+    .linkedin-mobile {
+        display: block;
+        margin-top: -20px; /* Show LinkedIn button on Mobile */
+    }
+
+    .submit-btn {
+        margin-bottom: 0px; /* Reduce space below submit button */
+    }
+
+    .linkedin-mobile {
+         /* Reduce space above the LinkedIn button */
+    }
+}
