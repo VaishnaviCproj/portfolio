@@ -52,51 +52,6 @@ body {
     color: #007bff;
 }
 
-/* ✅ Footer Styling - Only Visible at Bottom */
-.footer {
-    text-align: center;
-    padding: 10px;
-    font-size: 14px;
-    background-color: #f8f9fa; /* Light gray */
-    color: #333;
-    font-weight: bold;
-    width: 100%;
-    max-width: 100vw; /* Prevents horizontal scroll */
-    box-sizing: border-box;
-    border-top: 2px solid #e0e0e0; /* Subtle top border */
-    position: relative; /* Ensures it is placed at the bottom */
-    bottom: 0;
-}
-
-/* ✅ Ensures Footer Stays at Bottom Without Pushing Content */
-html, body {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden; /* Prevents unwanted scrolling */
-}
-
-body {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-}
-
-/* ✅ Footer Sits at Bottom Without Affecting Content */
-.footer {
-    margin-top: auto; /* Moves footer to bottom but does not push content */
-}
-
-/* ✅ Mobile Optimization */
-@media (max-width: 768px) {
-    .footer {
-        font-size: 12px;
-        padding: 8px;
-    }
-}
-
 
 /* About Section - Center Alignment */
 .about {
