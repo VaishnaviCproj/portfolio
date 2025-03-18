@@ -114,27 +114,7 @@
         </ul>
     </div>
 
-    <!-- ✅ Toggle Mobile Menu Script -->
-    <script>
-        let lastScrollTop = 0;
-        const hamburger = document.querySelector(".hamburger");
-        
-        window.addEventListener("scroll", function () {
-            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        
-            if (scrollTop > lastScrollTop) {
-                if (window.innerWidth <= 768) {
-                    hamburger.style.opacity = "0";
-                    hamburger.style.pointerEvents = "none";
-                }
-            } else {
-                hamburger.style.opacity = "1";
-                hamburger.style.pointerEvents = "auto";
-            }
-        
-            lastScrollTop = scrollTop;
-        });
-        
+   <script>
         function toggleMenu() {
             var menu = document.getElementById("mobileMenu");
             menu.classList.toggle("active");
