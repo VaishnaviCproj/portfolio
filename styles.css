@@ -175,6 +175,7 @@ body {
 /* Mobile Navigation - Hide Desktop Menu */
 .hamburger {
     display: none;
+    position: absolute;
     font-size: 30px;
     color: white;
     background: none;
