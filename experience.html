@@ -89,33 +89,11 @@
     </section>
 
     <script>
-        let lastScrollTop = 0;
-        const hamburger = document.querySelector(".hamburger");
-        
-        window.addEventListener("scroll", function () {
-            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        
-            if (scrollTop > lastScrollTop) {
-                // ✅ Scrolling Down → Hide Hamburger Menu (Only on Mobile)
-                if (window.innerWidth <= 768) {
-                    hamburger.style.opacity = "0";
-                    hamburger.style.pointerEvents = "none"; // Prevent clicking when hidden
-                }
-            } else {
-                // ✅ Scrolling Up → Show Hamburger Menu
-                hamburger.style.opacity = "1";
-                hamburger.style.pointerEvents = "auto";
-            }
-        
-            lastScrollTop = scrollTop;
-        });
-        
-        // ✅ Toggle Menu on Click
         function toggleMenu() {
             var menu = document.getElementById("mobileMenu");
             menu.classList.toggle("active");
         }
-    </script> 
+    </script>
 
 </body>
 </html>
