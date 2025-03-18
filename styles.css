@@ -226,7 +226,7 @@ body {
     }
 
     .mobile-menu.active {
-        display: flex;
+        display: block;
     }
 }
 
