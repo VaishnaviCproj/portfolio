@@ -173,9 +173,9 @@ body {
 }
 
 /* Mobile Navigation - Hide Desktop Menu */
+/* Mobile Navigation - Hide Desktop Menu */
 .hamburger {
     display: none;
-    position: fixed;
     font-size: 30px;
     color: white;
     background: none;
@@ -187,7 +187,7 @@ body {
 /* Mobile Menu */
 .mobile-menu {
     display: none;
-    position: fixed;
+    position: absolute;
     top: 60px;
     right: 0;
     background-color: #000;
