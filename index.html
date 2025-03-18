@@ -61,18 +61,11 @@
     </section>
 
     <script>
-        // Select the hamburger menu and mobile menu
-        const hamburger = document.querySelector(".hamburger");
-        const menu = document.getElementById("mobileMenu");
-
-        // Function to toggle menu visibility
         function toggleMenu() {
-            menu.classList.toggle("active"); // Show or hide menu
+            var menu = document.getElementById("mobileMenu");
+            menu.classList.toggle("active");
         }
-
-        // Event listener for click
-        hamburger.addEventListener("click", toggleMenu);
-    </script>        
+    </script>  
 
 </body>
 </html>
