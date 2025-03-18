@@ -52,55 +52,6 @@ body {
     color: #007bff;
 }
 
-/* ✅ Footer Styling - Prevent Overflow */
-.footer {
-    text-align: center;
-    padding: 10px;
-    font-size: 14px;
-    background-color: #f8f9fa; /* Light gray */
-    color: #333;
-    font-weight: bold;
-    width: 100%;
-    max-width: 100vw; /* Prevents horizontal scrolling */
-    overflow-x: hidden; /* Ensures no horizontal scroll */
-    box-sizing: border-box; /* Ensures padding doesn't increase width */
-    border-top: 2px solid #e0e0e0; /* Subtle separation */
-}
-
-/* ✅ Prevents Footer from Pushing Content */
-html, body {
-    min-height: 100%;
-    display: flex;
-    flex-direction: column;
-    margin: 0; /* Removes unwanted body margins */
-    padding: 0;
-    overflow-x: hidden; /* Prevents scrolling */
-}
-
-body {
-    flex-grow: 1;
-}
-
-.footer {
-    margin-top: auto; /* Pushes footer to bottom */
-}
-
-/* ✅ Adjust Gray Block Height */
-.about {
-    padding: 40px 5%; /* Reduce padding for shorter height */
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* ✅ Responsive Fix for Mobile */
-@media (max-width: 768px) {
-    .footer {
-        font-size: 10px;
-        padding: 8px;
-    }
-}
-
-
 /* About Section - Center Alignment */
 .about {
     display: flex;
