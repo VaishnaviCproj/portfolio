@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Spending Analysis</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- ✅ Fixed Navbar -->
+    <nav class="navbar">
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
+        <ul class="nav-links">
+            <li><a href="index.html">About</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="experience.html">Experience</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="contact.html">Contact Me</a></li>
+        </ul>
+    </nav>
+
+    <!-- ✅ Back Button -->
+    <a href="projects.html" class="back-button">Back</a>
+
+    <!-- ✅ Project Content -->
+    <section class="project-detail">
+        <h1>Customer Spending Analysis for Wholesale Business Optimization</h1>
+        <p class="project-date"><em>Created on [Insert Date]</em></p>
+
+        <hr>
+
+        <!-- ✅ Skills Section -->
+        <h4>Skills:</h4>
+        <ul>
+            <li><strong>Libraries:</strong> Pandas, Matplotlib, Seaborn</li>
+            <li><strong>Data Visualization:</strong> Boxplots, Histograms, Heatmaps, and Pairwise Scatter Plots</li>
+            <li><strong>Business Intelligence:</strong> Inventory Optimization, Market Segmentation, Targeted Marketing</li>
+            <li><strong>EDA & Feature Engineering:</strong> Outlier Detection, Correlation Analysis</li>
+        </ul>
+
+        <hr>
+
+        <!-- ✅ Project Overview -->
+        <h4>Project Overview:</h4>
+        <p>This project analyzes the Wholesale Customers Dataset to identify spending patterns across different customer segments (Retail vs. Horeca) and regions. The goal was to uncover insights for inventory management, targeted marketing, and customer segmentation.</p>
+        <ul>
+            <li><strong>Data Cleaning & Preparation:</strong> Processed a dataset with 6 numerical and 2 categorical variables, ensuring data integrity.</li>
+            <li><strong>Exploratory Data Analysis (EDA):</strong> Identified patterns in customer spending using statistical methods and visualizations.</li>
+            <li><strong>Market Segmentation:</strong> Analyzed spending behaviors across different regions and customer channels.</li>
+            <li><strong>Visualization & Reporting:</strong> Utilized boxplots, histograms, scatter plots, and correlation heatmaps to derive actionable insights.</li>
+        </ul>
+
+        <hr>
+
+        <!-- ✅ Key Contributions -->
+        <h4>Key Contributions:</h4>
+        <ul>
+            <li><strong>Category-wise Spending Analysis:</strong></li>
+            <ul>
+                <li>Discovered that Fresh products have the highest spending across all customer segments, while Delicatessen has the least.</li>
+                <li>Retailers spend significantly more on Grocery, Milk, and Detergents and Paper products, while Horeca clients prioritize Fresh products.</li>
+            </ul>
+            <li><strong>Correlation & Outlier Detection:</strong></li>
+            <ul>
+                <li>Found a strong correlation between Grocery, Milk, and Detergents_Paper categories, aiding in product bundling for better sales strategies.</li>
+                <li>Identified bulk buyers in the ‘Other’ region using outlier detection, enabling better inventory planning.</li>
+            </ul>
+            <li><strong>Business Strategy & Inventory Planning:</strong></li>
+            <ul>
+                <li>Recognized that spending patterns remain uniform across regions, allowing for consistent marketing strategies.</li>
+                <li>Discovered high spending variability for Fresh and Frozen products in Horeca clients, making inventory planning more challenging.</li>
+            </ul>
+        </ul>
+
+        <hr>
+
+        <!-- ✅ Results and Impact -->
+        <h4>Results and Impact:</h4>
+        <ul>
+            <li><strong>Optimized Inventory Management:</strong> Helped understand how to better allocate resources based on product demand trends.</li>
+            <li><strong>Enhanced Market Segmentation:</strong> Provided insights into customer spending behavior for targeted marketing campaigns.</li>
+            <li><strong>Data-Driven Decision Making:</strong> Enabled refining of sales strategies and maximize revenue potential.</li>
+        </ul>
+
+        <hr>
+
+        <!-- ✅ Learnings and Takeaways -->
+        <h4>Learnings and Takeaways:</h4>
+        <ul>
+            <li><strong>Advanced EDA Techniques:</strong> Developed expertise in boxplots, histograms, scatter plots, and heatmaps to uncover patterns.</li>
+            <li><strong>Customer Segmentation Strategies:</strong> Learned how data can be leveraged to personalize marketing and improve sales forecasting.</li>
+            <li><strong>Real-World Data Handling:</strong> Gained experience in dealing with missing values, outliers, and market segmentation challenges.</li>
+        </ul>
+    </section>
+
+    <!-- ✅ Back Button at the Bottom -->
+    <a href="projects.html" class="back-button">Back</a>
+
+    <!-- ✅ Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul>
+            <li><a href="index.html">About</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="experience.html">Experience</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="contact.html">Contact Me</a></li>
+        </ul>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2025 Vaishnavi Chakradeo. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("mobileMenu");
+            menu.classList.toggle("active");
+        }
+    </script>
+
+</body>
+</html>
