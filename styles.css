@@ -401,7 +401,7 @@ body {
 /* Adjust spacing for experience title, university name, and duration */
 .experience-content h2 {
     font-size: 18px; /* Reduce title size slightly */
-    margin-bottom: 5px; /* Reduce space below title */
+    margin-bottom: 3px; /* Reduce space below title */
 }
 
 .experience-content h3 {
